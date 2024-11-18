@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLink Health Dashboard</title>
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+
+<body>
+    <section class="dashboard">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <h1>Health Overview</h1>
+        </header>
+
+        <!-- Health Metrics Section -->
+        <div class="health-metrics">
+            <div class="metric-card">
+                <h2>Blood Sugar</h2>
+                <p>80 mg/dL</p>
+                <span class="status normal">Normal</span>
+            </div>
+            <div class="metric-card">
+                <h2>Heart Rate</h2>
+                <p>72 bpm</p>
+                <span class="status normal">Normal</span>
+            </div>
+            <div class="metric-card">
+                <h2>Blood Pressure</h2>
+                <p>120 / 80 mmHg</p>
+                <span class="status normal">Normal</span>
+            </div>
+        </div>
+
+        <!-- Activity Growth Chart -->
+        <div class="activity-growth">
+            <h2>Activity Growth</h2>
+            <canvas id="activityChart"></canvas>
+        </div>
+
+        <!-- BMI & Body Measurements Section -->
+        <div class="bmi-body-measurements">
+            <div class="bmi-calculator">
+                <h2>BMI Calculator</h2>
+                <p>Height: 170 cm</p>
+                <p>Weight: 72 kg</p>
+                <div class="bmi-value">
+                    <span>BMI: 24.9</span>
+                    <span class="status healthy">You're Healthy</span>
+                </div>
+            </div>
+
+            <div class="body-measurements">
+                <h2>Body Measurements</h2>
+                <p>Last checked 2 days ago</p>
+                <ul>
+                    <li>Chest: 44.5 in <span class="up">↑</span></li>
+                    <li>Waist: 34 in <span class="down">↓</span></li>
+                    <li>Hip: 42.5 in <span class="down">↓</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Upcoming Appointment Section -->
+        <div class="upcoming-appointment">
+            <h2>Upcoming Appointment</h2>
+            <p><strong>Date:</strong> November 20, 2024</p>
+            <p><strong>Consultation:</strong> Dr. James</p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="i.js"></script>
+
+</body>
+
+</html>

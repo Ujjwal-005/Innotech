@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocLink - Healthcare Simplified</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">
+                <h1>DocLink</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="profile.html" onclick="profile()">Profile</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#patient-reviews">About Us</a></li>
+                    <li><a href="#contact-footer">Contact Us</a></li>
+                    <li><a href="#login" onclick="openLogin()" id="login">Login</a></li>
+                    <li><a href="#register" onclick="openRegister()" id="register">Register</a></li>
+                </ul>
+            </nav>
+            <button class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div class="header-content">
+            <div class="welcome-section">
+                <h2>Welcome to DocLink</h2>
+                <p>Comprehensive solutions to enhance your healthcare journey</p>
+                <!-- Hospital Links Section -->
+                <div class="hospital-links">
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Delhi</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Mumbai</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Bengaluru</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Chennai</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Hyderabad</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Kolkata</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Pune</a>
+                    </div>
+                    <div class="hospital">
+                        <a href="hospital.html"><i class="fas fa-hospital"></i> Ahmedabad</a>
+                    </div>
+                </div>
+                <div class="search-bar main-search">
+                    <button> <a href="healthcare.html" class="active">Tap for Healthcare Services</a></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Login Modal Section -->
+    <div id="login-modal" class="login-modal">
+        <div class="login-content">
+            <span class="close-btn" onclick="closeLogin()">&times;</span>
+            <p id="login-error" style="display: none;">Login Failed</p>
+            <h2>Login</h2>
+            <form class="login-form" onsubmit="login(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username2" placeholder="Enter Username" required />
+                <label for="password">Password</label>
+                <input type="password" id="password2" placeholder="Enter Password" required />
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <div id="register-modal" class="login-modal">
+        <div class="login-content">
+            <span class="close-btn" onclick="closeRegister()">&times;</span>
+            <p id="register-error" style="display: none;">Registration Failed</p>
+            <h2>Register</h2>
+            <form class="login-form" onsubmit="Register(event)">
+                <label for="username">Username:</label>
+                <input type="text" id="username2" placeholder="Enter Username" required />
+                <label for="password">Password</label>
+                <input type="password" id="password2" placeholder="Enter Password" required />
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Key Services</h2>
+        <div class="service-intro">
+        <p >Explore our range of healthcare solutions tailored to meet your needs.Our platform
+            provides a variety of services to improve your access to healthcare. From telemedicine to expert
+            consultations, we connect you with the healthcare resources you need.</p>
+        <div class="services-container">
+            <div class="service-item">
+                <i class="fas fa-user-md service-icon"></i>
+                <a href="doctor.html" class="service-link">
+                    <h3>Doctor Recommendations</h3>
+                </a>
+                <p>Get personalized recommendations for trusted doctors in your area.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-calendar-check service-icon"></i>
+                <h3><a href="appointment.html">Online Appointments</a></h3>
+                <p>Book appointments easily with our seamless online scheduling.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-prescription service-icon"></i>
+                <h3><a href="prescription.html">Digital Prescriptions</a></h3>
+                <p>Receive and manage your prescriptions digitally for easy access.</p>
+            </div>
+            <div class="service-item">
+                <i class="fas fa-file-medical service-icon"></i>
+                <h3><a href="report.html">Medical Records</a></h3>
+                <p>Access and organize your medical records in one secure place.</p>
+            </div>
+            <!-- Health News and Expert Consultations items are positioned below -->
+            <div class="service-item health-news">
+                <i class="fas fa-newspaper service-icon" href="#latest-new"></i>
+                <h3>Health News</h3>
+                <p>Stay informed with the latest updates on health and wellness.</p>
+            </div>
+            <div class="service-item expert-consultations">
+                <i class="fas fa-comments service-icon"></i>
+                <h3>Expert Consultations</h3>
+                <p>Get professional advice and consultations from healthcare experts.</p>
+            </div>
+        </div>
+    </div>
+    <
+        <section id="latest-news" class="news-section">
+            <h2>Latest Health News</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" onclick="scrollCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="carousel-track">
+                    <!-- News Item 1 -->
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/HCRGSN9/vaccine.webp" alt="Health News 1">
+                        <h3>New Vaccination Center Opens</h3>
+                        <p>Posted on 8 November 2024</p>
+                    </div>
+                    <!-- News Item 2 -->
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/X2NRYMv/heart.jpg" alt="Health News 2">
+                        <h3>Breakthrough in Heart Disease Treatment</h3>
+                        <p>Posted on 7 November 2024</p>
+                    </div>
+                    <!-- News Item 3 -->
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/gzq0vGP/telemed.jpg" alt="Health News 3">
+                        <h3>Telemedicine Adoption Soars in 2024</h3>
+                        <p>Posted on 5 November 2024</p>
+                    </div>
+                    <!-- News Item 4 -->
+                    <div class="news-item">
+                        <img src="https://i.ibb.co/M6m003N/cancer.jpg" alt="Health News 4">
+                        <h3>New Advancements in Cancer Research</h3>
+                        <p>Posted on 4 November 2024</p>
+                    </div>
+                    <!-- News Item 5 -->
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/300x200?text=Health+News+5" alt="Health News 5">
+                        <h3>Mental Health Awareness Initiatives</h3>
+                        <p>Posted on 3 November 2024</p>
+                    </div>
+                    <!-- News Item 6 -->
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/300x200?text=Health+News+6" alt="Health News 6">
+                        <h3>Health Tech Innovations of 2024</h3>
+                        <p>Posted on 2 November 2024</p>
+                    </div>
+                </div>
+                <button class="carousel-btn next" onclick="scrollCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <!-- Pagination Indicators (Update number as needed) -->
+            <div class="carousel-indicators">
+                <span class="indicator active" onclick="moveToSlide(0)"></span>
+                <span class="indicator" onclick="moveToSlide(1)"></span>
+                <span class="indicator" onclick="moveToSlide(2)"></span>
+                <span class="indicator" onclick="moveToSlide(3)"></span>
+                <span class="indicator" onclick="moveToSlide(4)"></span>
+                <span class="indicator" onclick="moveToSlide(5)"></span>
+            </div>
+        </section>
+        <!-- Patient Review Section -->
+        <section id="patient-reviews" class="review-section">
+            <h2>Our Patients at the Heart of DocLink</h2>
+            <div class="review-container">
+                <div class="review-image">
+                    <img src="https://i.ibb.co/0sFB8k7/Screenshot-2024-11-14-at-10-22-51-AM.png" alt="Patient Image">
+                </div>
+                <div class="review-carousel">
+                    <div class="review-slide active">
+                        <div class="review-content">
+                            <img src="https://i.ibb.co/KVHRqzY/img3.jpg" alt="Patient Sarah" class="patient-photo">
+                            <p class="review-text">"The care I received at DocLink was beyond exceptional. From booking
+                                an appointment to getting my prescription, everything was seamless!"</p>
+                            <p class="reviewer-name">- Sarah J., California</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <img src="https://i.ibb.co/zhXX5yb/person1.jpg" alt="Patient Mark" class="patient-photo">
+                            <p class="review-text">"The doctors were thorough and kind. I felt genuinely cared for, and
+                                the online tools made accessing my health records easy."</p>
+                            <p class="reviewer-name">- Mark T., Texas</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <img src="https://i.ibb.co/RDGch3T/img3.jpg" alt="Patient Linda" class="patient-photo">
+                            <p class="review-text">"The digital appointment system is a game-changer. I can see a doctor
+                                without leaving home, saving me so much time!"</p>
+                            <p class="reviewer-name">- Linda R., New York</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <img src="https://i.ibb.co/xGMfbdC/img2.webp" alt="Patient Thomas" class="patient-photo">
+                            <p class="review-text">"DocLink provides quick, reliable access to health services. I
+                                appreciate their dedication to patient satisfaction."</p>
+                            <p class="reviewer-name">- Thomas A., Florida</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="review-content">
+                            <img src="https://via.placeholder.com/100x100?text=Emma" alt="Patient Emma"
+                                class="patient-photo">
+                            <p class="review-text">"I highly recommend DocLink! Their platform makes healthcare
+                                accessible and convenient, especially during these times."</p>
+                            <p class="reviewer-name">- Emma P., Illinois</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-buttons">
+                    <button class="carousel-btn prev" onclick="showReview(-1)">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="showReview(1)">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="contact-footer">
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <form class="contact-form" form action="https://submit-form.com/N9fACbAlL">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" rows="4" name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+            <footer class="footer-section">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>Popular Pages</h3>
+                        <ul>
+                            <li><a href="#">Find a Consultant</a></li>
+                            <li><a href="#">Health Services</a></li>
+                            <li><a href="#">Volunteer with Us</a></li>
+                            <li><a href="#">Career Opportunities</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Important Links</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Accessibility</a></li>
+                            <li><a href="#">Help Center</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 DocLink | All Rights Reserved</p>
+                </div>
+            </footer>
+        </section>
+     <script src="i.js"></script>
+    </body>
+</html>

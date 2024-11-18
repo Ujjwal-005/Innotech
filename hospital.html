@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospitals</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <section class="filter-section">
+        <input type="text" id="searchInput" placeholder="Search city..." oninput="searchHospitals()">
+        <input type="text" id="searchInput" placeholder="Search hospitals..." oninput="searchHospitals()">
+    
+        <select onchange="filterBySpecialty(this.value)">
+            <option value="All">All Specialties</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Oncology">Oncology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Orthopedics">Orthopedics</option>
+            <option value="Pediatrics">Pediatrics</option>
+        </select>
+        <label for="minCost">Cost Range:</label>
+        <input type="number" id="minCost" placeholder="Min Cost" onchange="filterByCost(parseInt(this.value), parseInt(document.getElementById('maxCost').value))">
+        <input type="number" id="maxCost" placeholder="Max Cost" onchange="filterByCost(parseInt(document.getElementById('minCost').value), parseInt(this.value))">
+        <button onclick="resetFilters()">Reset Filters</button>
+    </section>
+</header>
+
+<!-- Chennai Hospitals Section -->
+<section class="city-section" id="chennai">
+    <h2>Hospitals in Chennai</h2>
+    <div class="hospital-list">
+        <div class="hospital-card" id="chennai-hospital1">
+            <h3>Chennai Apollo Hospital</h3>
+            <p><strong>Specialty:</strong> Cardiology, Oncology, Neurology</p>
+            <p><strong>Average Cost:</strong> ₹5,00,000 - ₹15,00,000</p>
+            <p><strong>Rating:</strong> <span class="rating">4.5</span>/5</p>
+            <button onclick="toggleReviews('chennai-hospital1-reviews')">See Reviews</button>
+            <div class="reviews" id="chennai-hospital1-reviews">
+                <p>"Excellent facilities and world-class doctors!"</p>
+                <p>"Very clean and well-organized."</p>
+            </div>
+        </div>
+        <div class="hospital-card" id="chennai-hospital2">
+            <h3>Fortis Malar Hospital</h3>
+            <p><strong>Specialty:</strong> Orthopedics, Pediatrics, Cardiology</p>
+            <p><strong>Average Cost:</strong> ₹3,00,000 - ₹10,00,000</p>
+            <p><strong>Rating:</strong> <span class="rating">4.3</span>/5</p>
+            <button onclick="toggleReviews('chennai-hospital2-reviews')">See Reviews</button>
+            <div class="reviews" id="chennai-hospital2-reviews">
+                <p>"Great doctors and staff support!"</p>
+                <p>"Quick response during emergencies."</p>
+            </div>
+        </div>
+        <div class="hospital-card" id="chennai-hospital3">
+            <h3>ABC Hospital</h3>
+            <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+            <p><strong>Average Cost:</strong> ₹50,000</p>
+            <p><strong>Beds Available:</strong> 200</p>
+            <p><strong>Specialty:</strong> Cardiology, Neurology</p>
+            <button class="review-toggle" onclick="toggleReviews('chennai-abc')">Show Reviews</button>
+            <div id="chennai-hospital3" class="reviews">
+                <p>Review 1: Great hospital with experienced staff.</p>
+                <p>Review 2: Excellent facilities and patient care.</p>
+            </div>
+        </div>
+        <div class="hospital-card">
+            <h3>XYZ Medical Center</h3>
+            <p><strong>Location:</strong> Chennai, Tamil Nadu</p>
+            <p><strong>Average Cost:</strong> ₹45,000</p>
+            <p><strong>Beds Available:</strong> 150</p>
+            <p><strong>Specialty:</strong> Orthopedics, Pediatrics</p>
+            <button class="review-toggle" onclick="toggleReviews('chennai-xyz')">Show Reviews</button>
+            <div id="chennai-xyz" class="reviews">
+                <p>Review 1: Clean environment and friendly staff.</p>
+                <p>Review 2: Good experience overall.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Delhi Hospitals Section -->
+<section class="city-section" id="delhi">
+    <h2>Hospitals in Delhi</h2>
+    <div class="hospital-list">
+        <div class="hospital-card" id="delhi-hospital1">
+            <h3>AIIMS Delhi</h3>
+            <p><strong>Specialty:</strong> Cardiology, Neurology, Pediatrics</p>
+            <p><strong>Average Cost:</strong> ₹2,00,000 - ₹8,00,000</p>
+            <p><strong>Rating:</strong> <span class="rating">4.7</span>/5</p>
+            <button onclick="toggleReviews('delhi-hospital1-reviews')">See Reviews</button>
+            <div class="reviews" id="delhi-hospital1-reviews">
+                <p>"High-quality treatment and renowned specialists."</p>
+                <p>"Affordable and efficient healthcare."</p>
+            </div>
+        </div>
+        <div class="hospital-card" id="delhi-hospital2">
+            <h3>Max Super Speciality Hospital</h3>
+            <p><strong>Specialty:</strong> Oncology, Orthopedics, Cardiology</p>
+            <p><strong>Average Cost:</strong> ₹3,50,000 - ₹12,00,000</p>
+            <p><strong>Rating:</strong> <span class="rating">4.4</span>/5</p>
+            <button onclick="toggleReviews('delhi-hospital2-reviews')">See Reviews</button>
+            <div class="reviews" id="delhi-hospital2-reviews">
+                <p>"Excellent facilities and quick emergency care."</p>
+                <p>"Compassionate staff and well-maintained premises."</p>
+            </div>
+        </div>
+        <div class="hospital-card">
+            <h3>Delhi Healthcare</h3>
+            <p><strong>Location:</strong> Delhi, India</p>
+            <p><strong>Average Cost:</strong> ₹60,000</p>
+            <p><strong>Beds Available:</strong> 250</p>
+            <p><strong>Specialty:</strong> Oncology, Pediatrics</p>
+            <p><strong>Rating:</strong> <span class="rating">4.4</span>/5</p>
+
+            <button class="review-toggle" onclick="toggleReviews('delhi-dhc')">Show Reviews</button>
+            <div id="delhi-dhc" class="reviews">
+                <p>Review 1: Knowledgeable doctors and excellent services.</p>
+                <p>Review 2: Comfortable environment and attentive staff.</p>
+            </div>
+        </div>
+        <div class="hospital-card">
+            <h3>City Hospital</h3>
+            <p><strong>Location:</strong> Delhi, India</p>
+            <p><strong>Average Cost:</strong> ₹55,000</p>
+            <p><strong>Beds Available:</strong> 180</p>
+            <p><strong>Specialty:</strong> Pulmonology, Cardiology</p>
+            <button class="review-toggle" onclick="toggleReviews('delhi-ch')">Show Reviews</button>
+            <div id="delhi-ch" class="reviews">
+                <p>Review 1: Highly recommended for quick diagnosis.</p>
+                <p>Review 2: Supportive staff and modern facilities.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- JavaScript -->
+<script src="i.js"></script>
+</body>
+</html>

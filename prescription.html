@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescriptions</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Doctor Prescription</title>
+    <link rel="stylesheet" href="prescription.css">
+</head>
+<body>
+    <header>
+        <h1>Digital Patient Prescription</h1>
+        <p>Select your doctors name, hospita ,medical issue and find the right doctor for you.</p>
+    </header>
+    
+    <div class="container">
+        <h1>Prescription Form</h1>
+
+        <form id="prescriptionForm">
+            <div class="input-group">
+                <label for="doctorName">Doctor's Name</label>
+                <input type="text" id="doctorName" required>
+            </div>
+
+            <div class="input-group">
+                <label for="hospitalName">Hospital</label>
+                <input type="text" id="hospitalName" required>
+            </div>
+
+            <div class="input-group">
+                <label for="patientName">Patient's Name</label>
+                <input type="text" id="patientName" required>
+            </div>
+
+            <button type="button" onclick="addPrescription()">Add Prescription</button>
+        </form>
+
+        <div id="prescriptions"></div>
+    </div>
+
+    <script src="i.js"></script>
+</body>
+</html>
+
+</body>
+</html>

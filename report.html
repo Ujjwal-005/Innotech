@@ -1,0 +1,71 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Medical History</title>
+    <link rel="stylesheet" href="report.css">
+
+</head>
+<body>
+    <header>
+    
+        <h1>Patient Medical History</h1>
+    </header>
+    <div class="container">
+        <form id="patientInfoForm">
+            <div class="input-group">
+                <label for="patientName"><img src="user-icon.svg" alt="User Icon" class="icon"> Name</label>
+                <input type="text" id="patientName" placeholder="Enter Patient's Name" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="dateOfBirth"><img src="calendar-icon.svg" alt="Calendar Icon" class="icon"> Date of Birth</label>
+                <input type="date" id="dateOfBirth" required>
+            </div>
+            
+            <button type="button" class="btn" onclick="generateMedicalHistory()">Show Medical History</button>
+        </form>
+        
+        <div id="medicalHistory" style="display: none;">
+            <h2>Medical Reports</h2>
+
+            <div class="category">
+                <h3><img src="blood-test-svgrepo-com.svg" alt="Report Icon" class="icon"> Blood Tests</h3>
+                <div class="report">
+                    <p><strong>Hospital:</strong> City Hospital</p>
+                    <p><strong>Date:</strong> 2024-05-12</p>
+                    <p><strong>Results:</strong> Normal</p>
+                </div>
+                <div class="report">
+                    <p><strong>Hospital:</strong> General Health Center</p>
+                    <p><strong>Date:</strong> 2024-03-18</p>
+                    <p><strong>Results:</strong> Slightly Elevated Cholesterol</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3><img src="x-ray-skeleton-svgrepo-com.svg" alt="Scan Icon" class="icon"> X-Rays</h3>
+                <div class="report">
+                    <p><strong>Hospital:</strong> Regional Clinic</p>
+                    <p><strong>Date:</strong> 2023-11-08</p>
+                    <p><strong>Results:</strong> Minor Fracture in Left Arm</p>
+                </div>
+            </div>
+
+            <div class="category">
+                <h3><img src="ecg-lines-svgrepo-com.svg" alt="Heart Icon" class="icon"> ECG</h3>
+                <div class="report">
+                    <p><strong>Hospital:</strong> Heart Care Hospital</p>
+                    <p><strong>Date:</strong> 2024-01-15</p>
+                    <p><strong>Results:</strong> Normal</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="i.js"></script>
+</body>
+</html>
+

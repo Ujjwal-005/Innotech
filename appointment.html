@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Booking - DocLink</title>
+    <link rel="stylesheet" href="appoint.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Digital Appointment
+    </h1>
+</header>
+
+<!-- Appointment Form Section -->
+<section class="appointment-section">
+    <h2>Book an Appointment</h2>
+    <form id="appointmentForm">
+        <!-- Select City -->
+        <label for="city">Select Your City:</label>
+        <select id="city" required>
+            <option value="">--Select a City--</option>
+            <option value="delhi">Delhi</option>
+            <option value="chennai">Chennai</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="gujrat">Gujrat</option>
+            <option value="New York">New York</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Chicago">Chicago</option>
+            <option value="Houston">Houston</option>
+            <option value="Phoenix">Phoenix</option>
+        </select>
+
+        <!-- Select Medical Issue -->
+        <label for="issue">Select Your Medical Issue:</label>
+        <select id="issue" required>
+            <option value="">--Select an Issue--</option>
+            <option value="cardiology">Cardiology</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="neurology">Neurology</option>
+            <option value="dentistry">Dentistry</option>
+            <option value="ophthalmology">Ophthalmology</option>
+            <option value="psychiatry">Psychiatry</option>
+        </select>
+
+        <!-- Select Doctor -->
+        <label for="doctor">Select a Doctor:</label>
+        <select id="doctor" required>
+            <option value="">--Select a Doctor--</option>
+            <!-- Options populated by JavaScript based on city and issue -->
+        </select>
+
+        <!-- Appointment Type -->
+        <label for="appointmentType">Appointment Type:</label>
+        <div>
+            <input type="radio" id="online" name="appointmentType" value="Online" required>
+            <label for="online">Online</label>
+            <input type="radio" id="offline" name="appointmentType" value="Offline">
+            <label for="offline">Offline</label>
+        </div>
+
+        <!-- Date and Time -->
+        <label for="appointmentDate">Select Date:</label>
+        <input type="date" id="appointmentDate" required>
+
+        <label for="appointmentTime">Select Time:</label>
+        <input type="time" id="appointmentTime" required>
+
+        <!-- Submit Button -->
+        <button type="submit">Schedule Appointment</button>
+    </form>
+</section>
+
+<!-- Confirmation Section -->
+<section id="confirmationSection" class="confirmation-section">
+    <h2>Appointment Confirmation</h2>
+    <p id="confirmationMessage"></p>
+    <button onclick="something()">Get Prescription</button>
+</section>
+
+<script src="i.js"></script>
+</body>
+</html>
+
+</body>
+</html>

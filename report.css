@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #52924d34;
+    color:  #0b3e24;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #344e41;
+    color: #dad7cd;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: white;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #dad7cd;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #344e41;
+    margin-bottom: 1.5rem;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #344e41;
+    font-weight: bold;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.5rem;
+    border: 1px solid #3a5a40;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Button */
+.btn {
+    width: 100%;
+    padding: 0.7rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #3a5a40;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #588157;
+}
+
+/* Medical History */
+#medicalHistory {
+    margin-top: 1.5rem;
+}
+
+.category h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #3a5a40;
+    margin-top: 1rem;
+}
+
+.category h3 .icon {
+    margin-right: 0.5rem;
+}
+
+.report {
+    background-color: #92ad62;
+    margin-top: 0.5rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    color: #344e41;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.report p {
+    margin: 0.3rem 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .category h3 {
+        font-size: 1rem;
+    }
+}
